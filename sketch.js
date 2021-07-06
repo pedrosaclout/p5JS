@@ -54,7 +54,6 @@ function draw() {
     ellipse(elipsexc,elipseyc,80)
   pop()
 
-
   push();
     line(elipsexc, elipseyc, mouseX, mouseY);
     translate((elipsexc + mouseX) / 2, (elipseyc + mouseY) / 2);
