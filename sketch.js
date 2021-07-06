@@ -56,6 +56,10 @@ function draw() {
 
   let maxDistance = 400
 
+  let circleVolume = 3
+  song.play();
+  song.setVolume(circleVolume)
+
   push();
     line(elipsexc, elipseyc, x2, y2);
     translate((elipsexc + x2) / 2, (elipseyc + y2) / 2);
