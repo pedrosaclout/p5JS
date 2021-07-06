@@ -15,7 +15,14 @@ function preload() {
   song = loadSound("synth_circle.wav");
 }
 
-let circleVolume = 10
+let d = dist(elipsexc, elipseyc, mouseX, mouseY);
+
+let x2 = mouseX;
+let y2 = mouseY;
+
+let maxDistance = 400
+
+let circleVolume = d / 400
 
 function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
@@ -52,15 +59,6 @@ function draw() {
     fill(175,175,175,100)
     ellipse(elipsexc,elipseyc,80)
   pop()
-
-  let d = dist(elipsexc, elipseyc, mouseX, mouseY);
-
-  let x2 = mouseX;
-  let y2 = mouseY;
-
-  let maxDistance = 400
-
-
 
   push();
     line(elipsexc, elipseyc, x2, y2);
