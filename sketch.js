@@ -15,7 +15,7 @@ function preload() {
   song = loadSound("synth_circle.wav");
 }
 
-let circleVolume = 2
+let circleVolume = 10
 
 function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
