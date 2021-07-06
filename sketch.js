@@ -8,7 +8,6 @@ let elipsexc = 500;
 let elipseyc = 500;
 
 let cnv;
-
 var song;
 
 function preload() {
@@ -18,10 +17,8 @@ function preload() {
 let circleVolume = 3
 
 function setup() {
-  let x2 = mouseX;
-  let y2 = mouseY;
-  let maxDistance = 400
-  let d = dist(elipsexc, elipseyc, mouseX, mouseY);
+  var maxDistance = 400
+  var d = dist(elipsexc, elipseyc, mouseX, mouseY);
   cnv = createCanvas(cnvwidth, cnvheight);
   centerCanvas();
   background(255, 0, 200);
@@ -59,9 +56,9 @@ function draw() {
 
 
   push();
-    line(elipsexc, elipseyc, x2, y2);
-    translate((elipsexc + x2) / 2, (elipseyc + y2) / 2);
-    rotate(atan2(y2 - elipseyc, x2 - elipsexc));
+    line(elipsexc, elipseyc, mouseX, mouseY);
+    translate((elipsexc + mouseX) / 2, (elipseyc + mouseY) / 2);
+    rotate(atan2(mouseY - elipseyc, mouseX - elipsexc));
     text(nfc(d, 1), 0, -5);
   pop();
 }
