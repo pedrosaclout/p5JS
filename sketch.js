@@ -59,6 +59,7 @@ function draw() {
 
   let circleVolume = 3
   song.setVolume(circleVolume)
+  console.log(circleVolume)
 
   push();
     line(elipsexc, elipseyc, x2, y2);
