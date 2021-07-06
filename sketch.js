@@ -15,6 +15,29 @@ function preload() {
   song = loadSound("synth_circle.wav");
 }
 
+//draw bellow//
+
+function draw() {
+  background(200);
+
+  push();
+    drawingContext.shadowOffsetX = 0;
+    drawingContext.shadowOffsetY = 5;
+    drawingContext.shadowBlur = 15;
+    drawingContext.shadowColor = 'gray'
+    noStroke()
+    fill(175,175,175,100)
+    ellipse(elipsexc,elipseyc,80)
+  pop()
+
+  push();
+    line(elipsexc, elipseyc, x2, y2);
+    translate((elipsexc + x2) / 2, (elipseyc + y2) / 2);
+    rotate(atan2(y2 - elipseyc, x2 - elipsexc));
+    text(nfc(d, 1), 0, -5);
+  pop();
+}
+
 let d = dist(elipsexc, elipseyc, mouseX, mouseY);
 
 let x2 = mouseX;
@@ -45,27 +68,3 @@ function windowResized() {
 }
 
 //canvas above//
-
-
-//draw bellow//
-
-function draw() {
-  background(200);
-
-  push();
-    drawingContext.shadowOffsetX = 0;
-    drawingContext.shadowOffsetY = 5;
-    drawingContext.shadowBlur = 15;
-    drawingContext.shadowColor = 'gray'
-    noStroke()
-    fill(175,175,175,100)
-    ellipse(elipsexc,elipseyc,80)
-  pop()
-
-  push();
-    line(elipsexc, elipseyc, x2, y2);
-    translate((elipsexc + x2) / 2, (elipseyc + y2) / 2);
-    rotate(atan2(y2 - elipseyc, x2 - elipsexc));
-    text(nfc(d, 1), 0, -5);
-  pop();
-}
