@@ -23,7 +23,6 @@ let y2 = mouseY;
 let maxDistance = 400
 
 let circleVolume = d / 400
-console.log(circleVolume)
 
 function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
@@ -32,6 +31,8 @@ function setup() {
   song.play();
   song.setVolume(circleVolume)
 }
+
+console.log(circleVolume)
 
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
