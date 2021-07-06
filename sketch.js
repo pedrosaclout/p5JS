@@ -21,6 +21,8 @@ function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
   centerCanvas();
   background(255, 0, 200);
+  song.play();
+  song.setVolume(circleVolume)
 }
 
 function centerCanvas() {
@@ -65,6 +67,3 @@ function draw() {
     text(nfc(d, 1), 0, -5);
   pop();
 }
-
-song.play();
-song.setVolume(circleVolume)
