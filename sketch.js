@@ -60,8 +60,6 @@ function draw() {
 
   let maxDistance = 400
 
-
-
   push();
     line(elipsexc, elipseyc, x2, y2);
     translate((elipsexc + x2) / 2, (elipseyc + y2) / 2);
@@ -69,3 +67,5 @@ function draw() {
     text(nfc(d, 1), 0, -5);
   pop();
 }
+
+console.log(d)
