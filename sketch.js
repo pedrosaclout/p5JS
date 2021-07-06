@@ -8,6 +8,7 @@ let elipsexc = 500;
 let elipseyc = 500;
 
 let cnv;
+
 var song;
 
 function preload() {
@@ -17,8 +18,6 @@ function preload() {
 let circleVolume = 3
 
 function setup() {
-  var maxDistance = 400
-  var d = dist(elipsexc, elipseyc, mouseX, mouseY);
   cnv = createCanvas(cnvwidth, cnvheight);
   centerCanvas();
   background(255, 0, 200);
@@ -54,10 +53,19 @@ function draw() {
     ellipse(elipsexc,elipseyc,80)
   pop()
 
+  let d = dist(elipsexc, elipseyc, mouseX, mouseY);
+
+  let x2 = mouseX;
+  let y2 = mouseY;
+
+  let maxDistance = 400
+
+
+
   push();
-    line(elipsexc, elipseyc, mouseX, mouseY);
-    translate((elipsexc + mouseX) / 2, (elipseyc + mouseY) / 2);
-    rotate(atan2(mouseY - elipseyc, mouseX - elipsexc));
+    line(elipsexc, elipseyc, x2, y2);
+    translate((elipsexc + x2) / 2, (elipseyc + y2) / 2);
+    rotate(atan2(y2 - elipseyc, x2 - elipsexc));
     text(nfc(d, 1), 0, -5);
   pop();
 }
