@@ -58,7 +58,7 @@ function draw() {
   let maxDistance = 400
 
   let circleVolume = 3
-  song.setVolume(circleVolume)
+  song.setVolume(d / 400)
   console.log(d / 400)
 
   push();
