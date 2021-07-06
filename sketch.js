@@ -57,9 +57,8 @@ function draw() {
 
   let maxDistance = 400
 
-  let circleVolume = 3
-  song.setVolume(d / 400)
-  console.log(d / 400)
+  let circleVolume = d / 400
+  song.setVolume(circleVolume)
 
   push();
     line(elipsexc, elipseyc, x2, y2);
