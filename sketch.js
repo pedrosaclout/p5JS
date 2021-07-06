@@ -19,6 +19,7 @@ function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
   centerCanvas();
   background(255, 0, 200);
+  song.play();
 }
 
 function centerCanvas() {
@@ -57,7 +58,6 @@ function draw() {
   let maxDistance = 400
 
   let circleVolume = 3
-  song.play();
   song.setVolume(circleVolume)
 
   push();
