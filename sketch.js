@@ -23,6 +23,7 @@ let y2 = mouseY;
 let maxDistance = 400
 
 let circleVolume = d / 400
+console.log(circleVolume)
 
 function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
