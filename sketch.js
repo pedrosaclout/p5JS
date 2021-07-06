@@ -21,9 +21,6 @@ function setup() {
   cnv = createCanvas(cnvwidth, cnvheight);
   centerCanvas();
   background(255, 0, 200);
-  let circleVolume = 3
-  song.play();
-  song.setVolume(circleVolume)
 }
 
 function centerCanvas() {
