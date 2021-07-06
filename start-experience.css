@@ -1,0 +1,28 @@
+button{
+  margin: 0px;
+  border: 0px;
+  border-radius: 0px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(205, 205, 205);
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vw;
+}
+
+.button-start-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40vh;
+}
+
+.button-text-se {
+  font-family: HelveticaNeueLTStd-Roman;
+}
